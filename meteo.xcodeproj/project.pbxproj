@@ -11,6 +11,8 @@
 		8AD88110214B0954009F536C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD8810F214B0954009F536C /* LaunchScreen.storyboard */; };
 		8AD88112214B0963009F536C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD88111214B0963009F536C /* Main.storyboard */; };
 		8AD88114214B09C8009F536C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD88113214B09C7009F536C /* Images.xcassets */; };
+		8AD88117214B0BAE009F536C /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD88116214B0BAE009F536C /* WeatherViewController.swift */; };
+		8AD88119214B6615009F536C /* ChangeWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD88118214B6615009F536C /* ChangeWeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		8AD8810F214B0954009F536C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AD88111214B0963009F536C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8AD88113214B09C7009F536C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = meteo/Images.xcassets; sourceTree = "<group>"; };
+		8AD88116214B0BAE009F536C /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		8AD88118214B6615009F536C /* ChangeWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeWeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,12 +57,22 @@
 		8AD880FC214B08E5009F536C /* meteo */ = {
 			isa = PBXGroup;
 			children = (
+				8AD88115214B0B93009F536C /* ViewControllers */,
 				8AD880FD214B08E5009F536C /* AppDelegate.swift */,
 				8AD88109214B08E6009F536C /* Info.plist */,
 				8AD8810F214B0954009F536C /* LaunchScreen.storyboard */,
 				8AD88111214B0963009F536C /* Main.storyboard */,
 			);
 			path = meteo;
+			sourceTree = "<group>";
+		};
+		8AD88115214B0B93009F536C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8AD88116214B0BAE009F536C /* WeatherViewController.swift */,
+				8AD88118214B6615009F536C /* ChangeWeatherViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AD880FE214B08E5009F536C /* AppDelegate.swift in Sources */,
+				8AD88117214B0BAE009F536C /* WeatherViewController.swift in Sources */,
+				8AD88119214B6615009F536C /* ChangeWeatherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
