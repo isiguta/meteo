@@ -102,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="956" y="258.62068965517244"/>
         </scene>
-        <!--Change City View Controller-->
+        <!--Change Weather View Controller-->
         <scene sceneID="9fV-L8-Kpp">
             <objects>
-                <viewController id="P1Y-dL-zMM" customClass="ChangeCityViewController" customModule="meteo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="P1Y-dL-zMM" customClass="ChangeWeatherViewController" customModule="meteo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8SU-81-qPl"/>
                         <viewControllerLayoutGuide type="bottom" id="gDk-eH-nyp"/>
@@ -131,7 +131,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="getWeatherPressed:" destination="P1Y-dL-zMM" eventType="touchUpInside" id="Hz1-Nq-7O5"/>
+                                            <action selector="getWeather:" destination="P1Y-dL-zMM" eventType="touchUpInside" id="fDE-ge-NT8"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0F0-ob-gbM" userLabel="City Name Text Field">
@@ -165,7 +165,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="SGE-7i-E75"/>
                     <connections>
-                        <outlet property="changeCityTextField" destination="0F0-ob-gbM" id="RJQ-WZ-AQ3"/>
+                        <outlet property="cityNameTextField" destination="0F0-ob-gbM" id="2G7-hh-25a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wa8-oH-wtf" userLabel="First Responder" sceneMemberID="firstResponder"/>

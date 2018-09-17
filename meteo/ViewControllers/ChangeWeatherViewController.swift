@@ -10,6 +10,8 @@ import UIKit
 
 class ChangeWeatherViewController: UIViewController {
 
+    @IBOutlet weak var cityNameTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +23,9 @@ class ChangeWeatherViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func getWeather(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 
