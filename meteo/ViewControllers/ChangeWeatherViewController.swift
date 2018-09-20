@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol ChangeLocationDelegate {
+    func changeLocation(new: String)
+}
+
 class ChangeWeatherViewController: UIViewController {
 
     @IBOutlet weak var cityNameTextField: UITextField!
+    
+    var delegate: ChangeLocationDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,16 +30,9 @@ class ChangeWeatherViewController: UIViewController {
     }
     
     @IBAction func getWeather(_ sender: Any) {
+        let newCityName = cityNameTextField.text!
+        delegate?.changeLocation(new: newCityName)
+        dismiss(animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

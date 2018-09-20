@@ -11,7 +11,7 @@ import CoreLocation
 import Alamofire
 import SwiftyJSON
 
-class WeatherViewController: UIViewController, CLLocationManagerDelegate {
+class WeatherViewController: UIViewController, CLLocationManagerDelegate, ChangeLocationDelegate {
     
     let API_URL = "http://api.openweathermap.org/data/2.5/weather"
     let APP_ID = "bdab47e4ecb2981b680b172f91970841"
@@ -63,8 +63,13 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     
     func updateUI() {
         cityLabel.text = weatherDataModel.city
-        temperatureLabel.text = String(weatherDataModel.temperature)
+        temperatureLabel.text = "\(weatherDataModel.temperature)°"
         weatherIcon.image = UIImage(named: weatherDataModel.weatherIconName)
+    }
+    
+    func changeLocation(new: String) {
+        let params: [String: String] = ["q":new, "appid":APP_ID]
+        requestWeather(url: API_URL, parameters: params)
     }
     
     //Get device's GPS location
@@ -87,5 +92,12 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     //Show error if location is unavaliable
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toChangeCity" {
+            let destination = segue.destination as! ChangeWeatherViewController
+            destination.delegate = self
+        }
     }
 }
